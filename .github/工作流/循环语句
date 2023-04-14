@@ -1,0 +1,18 @@
+C语言如何实现实现循环？
+while语句
+for语句
+do...while语句
+
+#include <stdio.h>
+int main()
+{
+int line =0;
+printf("考上大学\n");
+while(line < 20000)
+{
+printf("敲代码%d\n", line);
+}
+if (line>=20000)
+printf("找到好工作\n");
+return 0;
+}
