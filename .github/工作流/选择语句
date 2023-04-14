@@ -1,0 +1,21 @@
+C语言
+选择语句
+如果你好好学习，校招是拿一个好offer，走上人生巅峰
+如果你不好好学习，毕业等于失业，回家卖红薯。
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+int input =0;
+printf("考上好大学\n");
+printf("你要好好学习吗(0\\1)\n");
+scanf("%d",&input);
+if(input ==0)
+printf("有一份好工作\n");
+else
+printf("毕业即失业\n");
+return 0;
+}
+
+输出：0  有一份好工作
+      1  毕业即失业
