@@ -1,0 +1,85 @@
+c语言
+字符串+转义字符+注释
+字符串
+双引号引起来的一串字符称为字符串字面值，简称字符串。
+“abcdef"
+char arr1[]="abc";//数组
+”hello bit";
+" "//空字符串
+"abc"='a''b''c''\0' // \0字符串的结束标志
+字符串的结束标志是一个\0的转义字符。在计算字符串长度的时候\0是结束标志，不算作字符串的内容。
+//数据在计算机上存储的时候，存储的是2进制
+
+char    //字符数据类型                                                 %c    ——打印字符格式的数据
+short   //短整型                                                            %d    ——打印整形的十进制数据
+int       //整形                                                                %f     ——打印浮点型数字
+long    //长整型                                                             %p   —— 以地址形式打印 
+long long //更长整形                                                     %x   ——打印16进制
+float    //单精度浮点型                                                   %lf   ——双精度
+double //双精度浮点型                                                   %s  ——打印字符串
+
+
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+char arr1[]="a,b,c";
+char arr2[]={'a','b','c'];
+printf("%d\n", strlen(arr1));
+printf("%d\n",strlen(arr2));
+return 0;
+}
+arr1=3        arr2=15（随机值）
+字符串的结束标志是一个\0的转义字符。在计算字符串长度的时候\0是结束标志，不算作字符串的内容
+
+转义字符--转变原来的意思
+#include <stdio.h>
+int main()
+{
+printf("c:\test\32\test.c");  //  \t水平制表符 
+printf("c\\test\\32\\test.c"); 
+return 0;
+}
+输出：c:    est[]        est.c
+输出：c:\test\32\test.c
+\?                       在书写连续多个问号时使用，防止他们被解析成三字母词       \\??+)→三字母词
+\'                        用于表示字符常量
+\“                       用于表示字符内部的双引号
+\\                       用于表示一个反斜杠，防止它被解析为一个转义序列符
+\a                      警告字符，蜂鸣
+\b                      退格符
+\f                       进格符
+\n                      换行
+\r                       回车
+\t                       水平制表符
+\v                      垂直制表符
+\ddd                  ddd表示1~3个八进制的数字。如：\130x             \\打印8进制用双引号
+\xdd                  dd表示2个16进制数字，如：\x300                       \\打印16进制用单引号、、
+
+
+#include <stdio.h>
+int main()
+{
+printf("(are  you  ok??)\n");
+printf("(are you  ok\?\?)\n");
+return 0;
+}
+输出：(are you ok]
+输出：(are you ok??)
+
+#include <stdio.h>
+int main()
+{
+printf("%d\n"  strlen("c:\text\32\test.c"));              // \32    32是2个8进制
+return 0;                                                              // 32作为8进制代表的十进制数字，作为ASCII码值，对应的字符
+}
+输出：13
+
+注释
+1.代码中有不需要的代码可以直接删除，也可以注释掉。
+2.代码中有些代码比较难懂，可以加一下注释文字。
+C语言风格注释/*xxxxxxxx*/  
+缺陷：不能嵌套注释
+C++风格的注释   // xxxxxxx
+可以注释一行也可以注释多行
+
