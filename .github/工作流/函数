@@ -1,0 +1,14 @@
+C语言
+函数
+int Add(int x, inty)       //自定义函数
+{                        
+int z =(x+y);    
+return z;
+}
+int main()
+{    
+int sum=0;
+sum=Add(2.3);
+printf(""%d\n",sum);
+return 0;
+}
