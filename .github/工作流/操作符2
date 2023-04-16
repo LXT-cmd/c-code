@@ -1,0 +1,84 @@
+C语言
+操作符
+~操作符
+#include <stdio.h>
+int main()
+{
+int a=0;               ~按位取反
+int b=~a;              //b是有符号的整形 //原码反码补码
+printf("%d\n",b);                                 //负数在内存中存储的时候，存储的二进制的补码
+return 0;                                             //使用的，打印的是这个数的原码
+}                                                                 //000....000 a
+输出：-1                                                    //111.....111  取反（补码）
+                                                                  //111.....110 反码
+                                                                  //100.....001原码
+++ --操作符
+#include <stdio.h>
+int main()
+{
+int a=10;              int b=++a;               //前置++(--)，先自增(自减)，在使用     //后置++(--)，先使用，后自增(自减）
+int b=a++;                                           
+printf("a=%d b=%d\n", a,b);
+return 0;
+}
+输出:a=11,b=10;
+(类型)操作符
+#include <stdio.h>
+int main(0
+{
+int a=(int)3.14;
+printf("%d\n",a);
+return 0;
+}
+关系操作符
+> >= < <= != ==
+逻辑操作符
+&&逻辑与
+| | 逻辑或
+#include <stdio.h>
+int main()
+{
+int a=3;                //真 ——非0      真与真为1
+int b=5;             //假——0           真与假为0
+int c =a&&b;     //&&——逻辑与
+printf("%d\n",c);  //int c =a||b;  有一个为真就为真
+return 0;
+}
+输出：1
+条件操作符
+exp1?exp2:exp3
+#include <stdio.h>
+{    
+int a=20;
+int b=10;
+int max=0;
+max=(a>b?a:b);
+printf("%d\n",max);
+return 0;
+)
+输出为20
+逗号表达式
+exp1,exp2,exp3...expn
+下标引用，函数调用和结构成员
+[] () . ->
+#include <stdio.h>
+int main()
+{    
+int arr[10]={0};
+arr[4];   //[]—下标引用操作符
+return 0;
+}
+int Add(int x,int y)
+{    
+int z=0;
+z=x+y;
+return z;
+}
+int main()
+{
+int a=20;
+int b=10;
+int  c=0;
+c=Add(a,b)   //()--函数调用操作符
+return 0;
+}
