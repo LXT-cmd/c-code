@@ -1,0 +1,29 @@
+C语言
+指针
+如何产生地址？
+32根地址线/数据线
+正电和负电
+1          0
+#inclue <stdio.h>
+int main()
+{
+    int a=10;  //4个字节
+    int* p=&a;  //取地址
+    printf("%p\n",&a);// 有一种变量是用存放地址的——指针变量
+    return 0;
+}
+int a=10;
+int* p=&a;
+*p=20;    //*解引用操作符
+#inclue <stdio.h>
+int main()
+{
+    char ch='w';
+    char* pc=&ch;
+    *pc='a';
+    printf("%c\n",ch);
+    return 0;
+}
+输出：a
+指针大小
+指针大小在32位平台是4个字节，64位平台8个字节。
