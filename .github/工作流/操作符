@@ -1,0 +1,90 @@
+C语言
+操作符
+算术操作符： + - / %
+移位操作符：>>  <<
+位操作符： & ^ |
+赋值操作符（复合操作符）：= += -= *= /= &= ^= |= >>= <<=
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+//移位操作符（2进制）
+// <<左移
+// >>右移
+int a=1;  //整形1占4个字符—32bit位
+int b=1;
+a<<1;
+b>>1;
+printf（“%d\n" a);
+printf("%d\n",b);
+return 0;
+}
+输出： 1
+     1
+     #include<stdio.h>
+int main()
+{    
+int a=3;
+int b=5;
+int c=a&b;
+// 011
+// 101  
+// 001    &按位与（有0出0，全1出1）
+// 111     |按位或（有1出1，全0出0）
+// 110     ^异或（相异出1，相同出0）
+return 0;
+}
+输出:001
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+int a=10;
+a=20;
+printf("%d\n",a);     //==赋值  ==判断相等
+return 0;                 //a=a+10与a+=10;意思一样
+}
+ 输出：20
+ 单目操作符
+！       逻辑反操作
+-          负值
++         正值
+&         取地址、
+sizeof  操作数的类型长度（以字节为单位）
+~         对一个数的二进制按位取反
+- -        前置、后置- -
+++       前置、后置++
+*          间接访问操作符
+(类型）强制类型转换
+单目操作符
+双目操作符
+三目操作符
+int main（）
+{    
+int a=10;
+int b=20;
+a+b     // +双目操作符（两个操作数）
+return 0;
+}
+C语言的0表示假，1表示真
+
+int main()
+{
+int a=10;
+//sizeof 计算的是变量//类型所占空间的大小，单位是字节
+printf（“%d\n", sizeof(a));=printf("%d\n:, sizeof(int));  //变量的时候括号可以省略，int的时候括号不能省略
+return 0;
+}
+输出：4
+int main()
+{
+int arr【10】={0}；
+int sz=0;
+printf("%d\n",sizeof(arr));
+sz=sizeof(arrr)/sizeof(arr[0]);
+printf("sz=%d\n",sz);
+return 0;
+}
+输出：40
+      se=10
+
