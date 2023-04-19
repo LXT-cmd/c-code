@@ -1,0 +1,93 @@
+C语言
+switch语句
+switch(整形表达式）
+{
+语句项；
+}
+而语句项是什么呢？
+//是一些case语句
+//如下：
+case 整形常量表达式：
+语句
+#include<stdio.h>
+int main()
+{
+    int day=0;
+    scanf("%d\n",day);
+    switch(day)    //必须是整形
+    {
+        case 1:    //整形常量表达式
+        printf("星期一");
+        break;
+        case 2:
+        printf("星期二");
+        break;
+        case 3:
+        printf("星期三");
+        break;
+        ...
+        case 7:
+        printf("星期日");
+        break;            
+    }
+    return 0;
+}
+在switch语句中，我们没法直接实际实现分支，搭配break使用才能实现真正的分支；
+输入1-5为工作日，输入6-7为休息日
+#include <stdio.h>
+int main()
+{
+    int day=0;
+    scanf("%d",day);
+    switch(day)
+    {
+        case 1:
+        case 2:
+        case 3:
+        case 4:
+        case 5:
+        printf("工作日\n");
+        break;
+        case 6:
+        case 7:
+        prinf("休息日\n");
+        break;
+        default:
+        printf("输入错误\n");    
+    }
+    return 0;
+}
+//最后一个也要加break；
+//如果超出范围加default；
+//case 可以出现break，default， if
+#include <stdio.h>
+int main()
+{
+    int n=1;
+    int m=2;
+    switch(n)
+    {
+        case 1:
+        m++;
+        case 2:
+        n++;
+        case 3:
+            switch(n)
+            {
+                case 1:
+                n++;
+                case 2:
+                m++;
+                n++;
+                break;            
+            }
+              case 4:
+                m++;
+                break;
+                defualt:
+                    break;                                
+    }
+    printf("m=%d,n=%d\n",m,n);
+    return 0;
+}
+输出：m=5，n=3
