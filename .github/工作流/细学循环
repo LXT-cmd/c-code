@@ -1,0 +1,217 @@
+C语言
+while循环
+while（表达式）//while语法结构
+输出0-10的数
+#include<stdio.h>
+int main()
+{
+    int i=1;
+    while(i<10)
+    {
+        printf("%d ",i);
+        i++;    
+    }
+    return 0;
+}
+输出：1 2 3 4 5 6 7 8 9 10
+//break 不管前面循环多少次都要跳出循环
+//continue 提前让程序结束
+  终止循环中本次循环
+  #include <stdio.h>
+int main()
+{
+    int ch=0; //CTRL+Z
+    while((ch=gerchar())!=EOF)    //EOF--end 0f file->-1
+    {
+        putchar(ch);            
+    }
+    return 0;
+}
+#include <stdio.h>
+int main()
+{
+    int reg=0;
+    int ch=0;
+    char password[20]={0};
+    printf("请输入密码：>");
+    scanf("%s",char);   //输入密码，并存放在password数组中
+    //缓冲区还剩余一个'\n'
+    //读取下一个'\n'
+    while ((ch=getchar())!='\n''')
+    {
+        ;    
+    }
+    printf("请确认（y/n)>:");
+    ret=getchar();
+    if(ret==r)
+    {
+        printf("确认成功\n");            
+    }
+    else
+    {
+        printf("放弃确认\n");    
+    }
+}#include <stdio.h>
+int main()
+{
+    int reg=0;
+    int ch=0;
+    char password[20]={0};
+    printf("请输入密码：>");
+    scanf("%s",char);   //输入密码，并存放在password数组中
+    //缓冲区还剩余一个'\n'
+    //读取下一个'\n'
+    while ((ch=getchar())!='\n''')
+    {
+        ;    
+    }
+    printf("请确认（y/n)>:");
+    ret=getchar();
+    if(ret==r)
+    {
+        printf("确认成功\n");            
+    }
+    else
+    {
+        printf("放弃确认\n");    
+    }
+}
+//代码2
+#include<stdio.h>
+int main()
+{
+    while((ch=getcahr())!=EOF)
+    {
+        if(ch<'0'||ch>'9')
+        continue;
+        putchar(ch);            
+    }
+    return 0;
+}
+for循环
+语法（表达式1；表达式2；表达式3）
+循环语句
+表达式1：表达式1为初始化部分，用于初始化循环变量的。
+表达式2：表达式2为条件判断部分，用于判断循环终止。
+表达式3：表达式3为调整部分，用于循环条件的调整。
+输出1-10的整数
+#include<stdio.h>
+int main()
+{
+    int i=0;
+    for(i=1;i<=10;i++)
+    {
+        printf("%d "i);            
+    }
+    return 0;
+}
+#include <stdio.h>                   
+int main()                            
+{                                      
+    int i=0;
+    //初始化  判断   调整
+    for (i=1;i<=10;i++)
+    {
+        if(i==5)
+        continue;
+        printf("%d ",i);            
+    }
+    return 0;
+}
+#include <stdio.h>                   
+int main()                            
+{                                      
+    int i=0;
+    //初始化  判断   调整
+    for (i=1;i<=10;i++)
+    {
+        if(i==5)
+        continue;
+        printf("%d ",i);            
+    }
+    return 0;
+}
+输出：1 2 3  4 6 7 8 9 10
+#include <stdio.h>
+int main()
+{
+    int i=1; //初始化
+    while(i<=10) //判断
+    {
+        if(i==5)
+        continue;
+        printf("%d ",i);
+        i++; //调整    
+    }
+    return 0;
+}
+输出：1 2 3 4 死循环
+for语句的循环控制变量
+一些建议
+1.不可在for循环体内修改循环变量，防止for循环失去控制
+2.建议for语句的循环控制变量的取值采用“前闭后开区间”写法
+一些for循环的变种
+#include <stdio.h>
+int main()
+{
+    //变种1
+    for( ; ; )
+    {
+        printf("hehe\n");            
+    }
+    //变种2
+    int x,y;
+    for(x=0,y=0;x<2&&y<5;++x,y++)
+    {
+        printf("hehe\n");    
+    }
+    return 0;
+}
+1.for循环的初始化，调整，判断都可以省略
+但是：
+for循环的判断部分 如果被省略，那判断条件就是：恒为真
+2.如果不是非常熟练，建议大家不要省略
+#include <stdio.h>
+int main()
+{
+    int i=0;
+    int j=0;
+    for( ; i<10;i++)
+    {
+        for( ;j<10;j++)
+        {
+            printf("hehe\n");        
+        }    
+    }
+    //10*10==100
+    return 0;
+}
+输出：10个hehe
+请问循环要循环多少次
+#include <stdio.h>
+int main()
+{
+    int i=0;
+    int k=0;
+    for(i=0,k=0;k=0;i++,k++)
+    k++;
+    return 0;
+}
+输出：没有循环
+do...while
+do
+循环语句；
+while（表达式）;
+#include <stdio.h>
+int main()
+{
+    //1-10
+    int i=1;
+    do
+    {
+        printf("%d "i);
+        i++;    
+    }
+    while(i<10);            
+    return 0;
+}
